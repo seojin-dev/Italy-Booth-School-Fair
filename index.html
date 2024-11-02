@@ -14,12 +14,8 @@
         <h1>이탈리아 문화 탐험</h1>
         <p>이탈리아의 멋진 문화를 함께 알아보아요!</p>
         <button class="button" onclick="startExploration()">시작하기</button>
-        <p id="copyright">2모둠 - 이탈리아</p>
-      </div>
-
-      <!-- 진행 상태 바 -->
-      <div class="progress-bar">
-        <div class="progress" id="progress"></div>
+        <p id="copyright">-</p>
+        <p id="copyright">2모둠 - 김서진, 이준서, 오승주</p>
       </div>
 
       <!-- 슬라이드 1: 카니발 -->
@@ -90,10 +86,14 @@
       </div>
 
       <!-- 파스타 슬라이드 -->
-      <div class="slide pasta-slide">
+      <div class="slide" id="pasta-slide">
         <h2>파스타</h2>
         <div class="image-container pasta-image">
-          <img src="pasta.jpeg" alt="이탈리아 파스타" />
+          <img
+            src="pasta.jpeg"
+            alt="이탈리아 파스타"
+            style="aspect-ratio: 3/2; object-fit: cover"
+          />
         </div>
         <p>
           긴 국수처럼 생긴 스파게티가 가장 유명해요. 납작하거나 동그란 모양 등
@@ -130,11 +130,15 @@
         </div>
       </div>
 
-      <!-- 슬라이드 6: 트룰리 -->
-      <div class="slide">
+      <!-- 트룰리(특별한 집) 슬라이드 -->
+      <div class="slide" id="trulli-slide">
         <h2>특별한 집</h2>
         <div class="image-container">
-          <img src="trulli.jpeg" alt="트룰리 집" />
+          <img
+            src="trulli.jpeg"
+            alt="트룰리 집"
+            style="width: 100%; height: 300px; object-fit: cover"
+          />
         </div>
         <p>
           이탈리아 알베로벨로라는 마을에는 '트룰리'라는 독특한 집들이 있어요.
@@ -149,7 +153,6 @@
           </button>
         </div>
       </div>
-
       <!-- 슬라이드 7: 집 꾸미기 -->
       <div class="slide">
         <h2>집 꾸미기</h2>
