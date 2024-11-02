@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이탈리아 문화 탐험</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 시작 화면 -->
+      <div class="start-screen" id="startScreen">
+        <img src="italy-flag.png" alt="이탈리아 로고" class="logo" />
+        <h1>이탈리아 문화 탐험</h1>
+        <p>이탈리아의 멋진 문화를 함께 알아보아요!</p>
+        <button class="button" onclick="startExploration()">시작하기</button>
+        <p id="copyright">2모둠 - 이탈리아</p>
+      </div>
+
+      <!-- 진행 상태 바 -->
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+
+      <!-- 슬라이드 1: 카니발 -->
+      <div class="slide" id="carnival">
+        <h2>카니발이란?</h2>
+        <div class="image-container">
+          <img src="carnival.jpeg" alt="베네치아 카니발" />
+        </div>
+        <p>
+          카니발은 아주 오래전부터 시작된 신나는 축제예요. 옛날 사람들은 특별한
+          기간 동안 맛있는 음식을 먹지 않고 기도를 해야 했어요. 그래서 그 기간이
+          시작되기 전에 맛있는 음식도 실컷 먹고 신나게 놀면서 축제를 즐겼답니다.
+        </p>
+        <div class="navigation">
+          <button class="button prev-button" onclick="prevSlide()">
+            ← 이전
+          </button>
+          <button class="button next-button" onclick="nextSlide()">
+            다음 →
+          </button>
+        </div>
+      </div>
+
+      <!-- 슬라이드 2: 베네치아 가면 -->
+      <div class="slide">
+        <h2>베네치아의 특별한 가면</h2>
+        <div class="image-container">
+          <img src="venice-mask.jpeg" alt="베네치아 가면" />
+        </div>
+        <p>
+          베네치아라는 예쁜 도시에서는 축제 때 모든 사람들이 예쁜 가면을 써요.
+          처음에는 가죽이나 도자기로 간단하게 만들었지만, 지금은 반짝이는 금색과
+          예쁜 깃털, 보석으로 꾸며서 아주 멋지게 만든답니다.
+        </p>
+        <div class="navigation">
+          <button class="button prev-button" onclick="prevSlide()">
+            ← 이전
+          </button>
+          <button class="button next-button" onclick="nextSlide()">
+            다음 →
+          </button>
+        </div>
+      </div>
+
+      <!-- 슬라이드 3: 과자 -->
+      <div class="slide">
+        <h2>맛있는 과자</h2>
+        <div class="food-section">
+          <div class="food-item">
+            <img src="macaron.jpeg" alt="마카롱" />
+            <h3>마카롱</h3>
+            <p>동그랗고 알록달록한 마카롱</p>
+          </div>
+          <div class="food-item">
+            <img src="nunettine.jpeg" alt="누네띠네" />
+            <h3>누네띠네</h3>
+            <p>바삭하고 달콤한 누네띠네</p>
+          </div>
+        </div>
+        <div class="navigation">
+          <button class="button prev-button" onclick="prevSlide()">
+            ← 이전
+          </button>
+          <button class="button next-button" onclick="nextSlide()">
+            다음 →
+          </button>
+        </div>
+      </div>
+
+      <!-- 파스타 슬라이드 -->
+      <div class="slide pasta-slide">
+        <h2>파스타</h2>
+        <div class="image-container pasta-image">
+          <img src="pasta.jpeg" alt="이탈리아 파스타" />
+        </div>
+        <p>
+          긴 국수처럼 생긴 스파게티가 가장 유명해요. 납작하거나 동그란 모양 등
+          여러 가지 모양의 파스타가 있어서 골라 먹는 재미가 있답니다.
+        </p>
+        <div class="navigation">
+          <button class="button prev-button" onclick="prevSlide()">
+            ← 이전
+          </button>
+          <button class="button next-button" onclick="nextSlide()">
+            다음 →
+          </button>
+        </div>
+      </div>
+
+      <!-- 피자 슬라이드 -->
+      <div class="slide pizza-slide">
+        <h2>피자</h2>
+        <div class="image-container pizza-image">
+          <img src="pizza.jpeg" alt="이탈리아 피자" />
+        </div>
+        <p>
+          이탈리아는 피자의 고향이에요! 토마토 소스와 치즈, 바질 잎을 올린
+          마르게리따 피자가 가장 유명하답니다. 다양한 재료를 올려서 만드는 여러
+          종류의 피자가 있어요.
+        </p>
+        <div class="navigation">
+          <button class="button prev-button" onclick="prevSlide()">
+            ← 이전
+          </button>
+          <button class="button next-button" onclick="nextSlide()">
+            다음 →
+          </button>
+        </div>
+      </div>
+
+      <!-- 슬라이드 6: 트룰리 -->
+      <div class="slide">
+        <h2>특별한 집</h2>
+        <div class="image-container">
+          <img src="trulli.jpeg" alt="트룰리 집" />
+        </div>
+        <p>
+          이탈리아 알베로벨로라는 마을에는 '트룰리'라는 독특한 집들이 있어요.
+          동그란 벽에 뾰족한 지붕이 있는 모양이 마치 동화 속 집처럼 예쁘답니다.
+        </p>
+        <div class="navigation">
+          <button class="button prev-button" onclick="prevSlide()">
+            ← 이전
+          </button>
+          <button class="button next-button" onclick="nextSlide()">
+            다음 →
+          </button>
+        </div>
+      </div>
+
+      <!-- 슬라이드 7: 집 꾸미기 -->
+      <div class="slide">
+        <h2>집 꾸미기</h2>
+        <div class="image-container">
+          <img src="italian-home.jpeg" alt="이탈리아 집 인테리어" />
+        </div>
+        <p>
+          이탈리아 사람들은 집을 예쁘게 꾸미는 것을 좋아해요. 북쪽 지역 사람들은
+          우아하게, 남쪽 지역 사람들은 밝고 화려하게 집을 꾸민답니다.
+        </p>
+        <div class="navigation">
+          <button class="button prev-button" onclick="prevSlide()">
+            ← 이전
+          </button>
+          <button class="button next-button" onclick="nextSlide()">
+            퀴즈 시작
+          </button>
+        </div>
+      </div>
+
+      <!-- 퀴즈 섹션 -->
+      <div class="quiz" id="quiz">
+        <h2>재미있는 O/X 퀴즈</h2>
+
+        <div class="quiz-question">
+          <p>1. 카니발은 사순절 전에 열리는 축제인가요?</p>
+          <div class="quiz-options">
+            <button class="button" onclick="checkAnswer(1, true)">O</button>
+            <button class="button" onclick="checkAnswer(1, false)">X</button>
+          </div>
+          <p id="answer1" class="answer-feedback"></p>
+        </div>
+
+        <div class="quiz-question">
+          <p>2. 트룰리는 이탈리아의 전통 음식인가요?</p>
+          <div class="quiz-options">
+            <button class="button" onclick="checkAnswer(2, true)">O</button>
+            <button class="button" onclick="checkAnswer(2, false)">X</button>
+          </div>
+          <p id="answer2" class="answer-feedback"></p>
+        </div>
+
+        <div class="quiz-question">
+          <p>3. 마르게리따 피자는 이탈리아에서 시작되었나요?</p>
+          <div class="quiz-options">
+            <button class="button" onclick="checkAnswer(3, true)">O</button>
+            <button class="button" onclick="checkAnswer(3, false)">X</button>
+          </div>
+          <p id="answer3" class="answer-feedback"></p>
+        </div>
+
+        <div class="quiz-question">
+          <p>4. 베네치아 카니발에서는 가면을 쓰나요?</p>
+          <div class="quiz-options">
+            <button class="button" onclick="checkAnswer(4, true)">O</button>
+            <button class="button" onclick="checkAnswer(4, false)">X</button>
+          </div>
+          <p id="answer4" class="answer-feedback"></p>
+        </div>
+
+        <div class="quiz-question">
+          <p>5. 파스타는 중국에서 시작되었나요?</p>
+          <div class="quiz-options">
+            <button class="button" onclick="checkAnswer(5, true)">O</button>
+            <button class="button" onclick="checkAnswer(5, false)">X</button>
+          </div>
+          <p id="answer5" class="answer-feedback"></p>
+        </div>
+
+        <button class="button home-button" onclick="goHome()">
+          홈으로 가기
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
