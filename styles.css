@@ -4,27 +4,60 @@
   box-sizing: border-box;
 }
 
+/* 기본 스타일 */
+html,
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
-  color: #333;
-  line-height: 1.6;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  min-height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1000px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  overflow-y: auto;
 }
 
+/* 진행 상태 바를 상단에 배치 */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 20px; /* 아래쪽 여백 추가 */
+  position: sticky; /* 스크롤 시에도 상단에 고정 */
+  top: 0;
+  z-index: 1000;
+}
+
+.progress {
+  height: 100%;
+  background: #1a73e8;
+  border-radius: 5px;
+  transition: width 0.3s;
+}
+
+/* 시작 화면 */
 .start-screen {
   text-align: center;
-  padding: 40px 20px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  padding: 40px;
+  margin: auto;
+  width: 100%;
 }
 
 .logo {
